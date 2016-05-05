@@ -13,58 +13,24 @@
     tools:context="com.example.mars.httpapp.GroupDetailActivity"
     tools:showIn="@layout/activity_group_detail">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Squad Details"
-        android:id="@+id/textView"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="54dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Class:"
-        android:textColor="@color/white"
-        android:id="@+id/textView2"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginStart="68dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Class Number:"
-        android:textColor="@color/white"
-        android:id="@+id/textView3"
-        android:layout_marginTop="36dp"
-        android:phoneNumber="false"
-        android:layout_below="@+id/textView2"
-        android:layout_toLeftOf="@+id/classNumberTextView"
-        android:layout_toStartOf="@+id/classNumberTextView" />
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/classNumberTextView"
         android:textColor="@color/white"
-        android:textSize="18dp"
-        android:layout_marginLeft="62dp"
-        android:layout_marginStart="62dp"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
+        android:textSize="25dp"
+        android:layout_marginLeft="68dp"
+
+        android:layout_marginStart="68dp"
+        android:layout_alignTop="@+id/classTextView"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,10 +38,11 @@
         android:text="New Text"
         android:id="@+id/classTextView"
         android:textColor="@color/white"
-        android:textSize="18dp"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignLeft="@+id/classNumberTextView"
-        android:layout_alignStart="@+id/classNumberTextView" />
+        android:textSize="25dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/classNumberTextView"
+        android:layout_toStartOf="@+id/classNumberTextView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -86,9 +53,9 @@
         android:id="@+id/textView6"
         android:layout_marginTop="41dp"
         android:phoneNumber="false"
-        android:layout_below="@+id/textView3"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3" />
+        android:layout_below="@+id/classTextView"
+        android:layout_alignRight="@+id/classTextView"
+        android:layout_alignEnd="@+id/classTextView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -123,9 +90,7 @@
         android:id="@+id/textView9"
         android:layout_marginTop="37dp"
         android:phoneNumber="false"
-        android:layout_below="@+id/textView8"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_below="@+id/textView8" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -148,5 +113,6 @@
         android:layout_alignTop="@+id/textView9"
         android:layout_alignLeft="@+id/timeTextView"
         android:layout_alignStart="@+id/timeTextView" />
+    </RelativeLayout>
 
 </RelativeLayout>

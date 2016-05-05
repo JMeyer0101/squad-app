@@ -2,6 +2,7 @@ package layout;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -25,6 +26,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.mars.httpapp.AppController;
 
 import com.example.mars.httpapp.GroupAdapter;
+import com.example.mars.httpapp.GroupDetailActivity;
 import com.example.mars.httpapp.R;
 import com.example.mars.httpapp.StudyGroup;
 import com.example.mars.httpapp.User;
@@ -146,11 +148,14 @@ public class fragment_page extends Fragment {
 
                 // ListView Clicked item value
                 //String itemValue = (String) listView.getItemAtPosition(position);
+                StudyGroup selectedGroup = (StudyGroup) parent.getAdapter().getItem(itemPosition);
+                // Show Alert
+                Intent intent = new Intent(getActivity(), GroupDetailActivity.class);
+                intent.putExtra("selectedGroup", selectedGroup);
+                startActivity(intent);
 
                 // Show Alert
-                Toast.makeText(getActivity().getApplicationContext(),
-                        "Position :" + itemPosition + "  ListItem : ", Toast.LENGTH_LONG)
-                        .show();
+
 
             }
 

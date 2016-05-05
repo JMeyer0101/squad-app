@@ -20,7 +20,8 @@
         android:id="@+id/textemail"
         android:hint="Email"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -30,7 +31,8 @@
         android:id="@+id/textpass"
         android:hint="Password"
         android:layout_below="@+id/textemail"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 
     <Button
         android:layout_width="wrap_content"
