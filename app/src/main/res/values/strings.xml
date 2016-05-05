@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Studygroup Former</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="departments_array">
+        <item>CS</item>
+        <item>ENG</item>
+        <item>HIST</item>
+        <item>MATH</item>
+        <item>PHYS</item>
+        <item>CHEM</item>
+    </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_make_account">MakeAccountActivity</string>
+    <string name="title_activity_group_detail">GroupDetailActivity</string>
+</resources>

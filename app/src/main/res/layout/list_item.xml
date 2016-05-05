@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:layout_width="wrap_content"
+    >
+
+    <linearlayout android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="fill_parent">
+        <TextView android:id="@+id/classname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+        <Textview android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </linearlayout>
+</linearlayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6c7a89</color>
+    <color name="colorPrimaryDark">#22313F</color>
+    <color name="colorAccent">#19B5FE</color>
+    <color name="colorSecondary">#95A5A6</color>
+    <color name="PUMICE">#D2D7D3</color>
+    <color name="GALLERY">#EEEEEE</color>
+    <color name="white">#f8f8ff</color>
+    <color name="IRON">#DADFE1</color>
+
+</resources>
