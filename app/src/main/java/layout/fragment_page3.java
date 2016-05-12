@@ -166,9 +166,9 @@ public class fragment_page3 extends Fragment {
             _jsonOBJ.put("class_number", Integer.valueOf(classno.getText().toString()));
         _jsonOBJ.put("department", searchquerydept);
 
-        _jsonOBJ.put("date", date.toString());
-        _jsonOBJ.put("description", description.toString());
-        _jsonOBJ.put("time", time.toString());
+        _jsonOBJ.put("date", date.getText().toString());
+        _jsonOBJ.put("description", description.getText().toString());
+        _jsonOBJ.put("time", time.getText().toString());
 
         JSONObject parentData = new JSONObject();
         parentData.put("studygroup", _jsonOBJ);

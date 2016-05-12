@@ -1,5 +1,6 @@
 package layout;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -36,6 +37,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 
 public class fragment_page2 extends Fragment {
@@ -89,12 +91,24 @@ public class fragment_page2 extends Fragment {
         if(AppController.getInstance().FullGroupList.size() > 0)
         {
             AppController.getInstance().FullGroupList.clear();
-            makeJsonArrayRequest();
+            makeAllGroupsRequest();
         }
 
 
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+
+                    makeAllGroupsRequest();
+
+
+            }
+        }
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -114,7 +128,7 @@ public class fragment_page2 extends Fragment {
         refreshbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makeJsonArrayRequest();
+                makeAllGroupsRequest();
             }
         });
         final ListView listView = (ListView) view.findViewById(R.id.list2);
@@ -129,15 +143,17 @@ public class fragment_page2 extends Fragment {
         if(AppController.getInstance().FullGroupList.size() > 0)
         {
             AppController.getInstance().FullGroupList.clear();
-            makeJsonArrayRequest();
+            makeAllGroupsRequest();
         }
         else {
             //makeJsonObjectRequest();
 
-                makeJsonArrayRequest();
+                makeAllGroupsRequest();
 
 
         }
+
+
         // ListView Item Click Listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -154,10 +170,8 @@ public class fragment_page2 extends Fragment {
                 // Show Alert
                 Intent intent = new Intent(getActivity(), GroupDetailActivity.class);
                 intent.putExtra("selectedGroup", selectedGroup);
-                startActivity(intent);
-                Toast.makeText(getActivity().getApplicationContext(),
-                        "Position :" + itemPosition + "  ListItem : " + selectedGroup.department.toString() + " " + selectedGroup.classnumber, Toast.LENGTH_LONG)
-                        .show();
+                startActivityForResult(intent, 1);
+
 
             }
 
@@ -178,7 +192,7 @@ public class fragment_page2 extends Fragment {
     /**
      * Method to make json array request where response starts with [
      * */
-    private void makeJsonArrayRequest() {
+    private void makeAllGroupsRequest() {
 
         showpDialog();
         AppController.getInstance().FullGroupList.clear();
@@ -210,7 +224,16 @@ public class fragment_page2 extends Fragment {
 
                                 //appcontroller logic
                                 AppController.getInstance().FullGroupList.add(new StudyGroup(id, department, classno, time, description, date));
+                                for (Iterator<StudyGroup> iterator = AppController.getInstance().FullGroupList.iterator(); iterator.hasNext(); ) {
+                                    StudyGroup sg = iterator.next();
+                                    for (StudyGroup usergroup: AppController.getInstance().AppUserGroups ) {
 
+                                        if(sg.id == usergroup.id){
+                                            iterator.remove();
+                                        }
+                                    }
+
+                                }
                             }
 
 //                            txtResponse.setText(jsonResponse);

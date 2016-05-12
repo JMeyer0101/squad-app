@@ -1,5 +1,6 @@
 package layout;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -81,6 +82,12 @@ public class fragment_page extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+       /* try {
+            makeJsonArrayRequest();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         if (AppController.getInstance().AppUserGroups.size() >0) {
             GroupAdapter adapter2 = new GroupAdapter(getActivity().getApplicationContext(),
                     AppController.getInstance().AppUserGroups);
@@ -88,9 +95,24 @@ public class fragment_page extends Fragment {
             final ListView listView = (ListView) getActivity().findViewById(R.id.list);
 
             listView.setAdapter(adapter2);
-        }
+        }*/
     }
 
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                try {
+                    makeJsonArrayRequest();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -111,14 +133,14 @@ public class fragment_page extends Fragment {
             userinfo.setText(AppController.getInstance().AppUser.username + "\n\n" +
                     AppController.getInstance().AppUser.email);
 
-        if(AppController.getInstance().AppUserGroups.size() > 0)
+        /*if(AppController.getInstance().AppUserGroups.size() > 0)
         {
             GroupAdapter adapter2 = new GroupAdapter(getActivity().getApplicationContext(),
                     AppController.getInstance().AppUserGroups);
             // Assign adapter to ListView
             listView.setAdapter(adapter2);
         }
-        else {
+        else {*/
 
 
 
@@ -129,11 +151,11 @@ public class fragment_page extends Fragment {
                 e.printStackTrace();
             }
 
-           /* GroupAdapter adapter2 = new GroupAdapter(getActivity().getApplicationContext(),
+            GroupAdapter adapter2 = new GroupAdapter(getActivity().getApplicationContext(),
                     AppController.getInstance().AppUserGroups);
             // Assign adapter to ListView
-            listView.setAdapter(adapter2);*/
-        }
+            listView.setAdapter(adapter2);
+       // }
 
 
         // ListView Item Click Listener
@@ -152,7 +174,7 @@ public class fragment_page extends Fragment {
                 // Show Alert
                 Intent intent = new Intent(getActivity(), GroupDetailActivity.class);
                 intent.putExtra("selectedGroup", selectedGroup);
-                startActivity(intent);
+                startActivityForResult(intent, 1);
 
                 // Show Alert
 
@@ -253,7 +275,7 @@ public class fragment_page extends Fragment {
         pDialog.setCancelable(false);
 
         showpDialog();
-
+        AppController.getInstance().AppUserGroups.clear();
         final JSONObject user = new JSONObject();
         final JSONObject _jsonOBJ = new JSONObject();
         _jsonOBJ.put("email", AppController.getInstance().AppUser.email);

@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txtResponse;
 
+    @Override
+    public void onBackPressed() {
+    }
     // temporary string to show the parsed response
     private String jsonResponse;
     @Override

@@ -1,11 +1,14 @@
 package com.example.mars.httpapp;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +24,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class GroupDetailActivity extends AppCompatActivity {
 
     private ProgressDialog pDialog;
@@ -31,8 +37,13 @@ public class GroupDetailActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        pDialog = new ProgressDialog(this);
+        pDialog.setMessage("Please wait...");
+        pDialog.setCancelable(false);
+
         Intent i = getIntent();
-        StudyGroup currentGroup = (StudyGroup) getIntent().getParcelableExtra("selectedGroup");
+        final StudyGroup currentGroup = (StudyGroup) getIntent().getParcelableExtra("selectedGroup");
+        final int groupID = currentGroup.id;
         //debug log group description
         Log.d("data", currentGroup.description);
 
@@ -42,11 +53,67 @@ public class GroupDetailActivity extends AppCompatActivity {
         TextView dtextView = (TextView) findViewById(R.id.descriptionTextView);
         TextView timeTextView = (TextView) findViewById(R.id.timeTextView);
 
+
+
         classTextView.setText(currentGroup.department);
         classNumberTextView.setText("" +currentGroup.classnumber);
         dateTextView.setText(currentGroup.date);
         dtextView.setText(currentGroup.description);
         timeTextView.setText(currentGroup.time);
+
+        final Button joinbutton = (Button) findViewById(R.id.joingroupbutton);
+        final Button leavebutton = (Button) findViewById(R.id.leavegroupbutton);
+
+        joinbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    makeJoinRequest(groupID);
+                    AppController.getInstance().AppUserGroups.add(currentGroup);
+                    //joinbutton.setVisibility(View.GONE);
+                    //leavebutton.setVisibility(View.VISIBLE);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                Intent intent = new Intent();
+                setResult(Activity.RESULT_OK, intent);
+                finish();
+
+            }
+        });
+        leavebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<StudyGroup> temp = AppController.getInstance().AppUserGroups;
+                try {
+                    makeLeaveRequest(groupID);
+                    for (Iterator<StudyGroup> iterator = AppController.getInstance().AppUserGroups.iterator(); iterator.hasNext(); ) {
+                        StudyGroup sg = iterator.next();
+                        if(sg.id == currentGroup.id){
+                            iterator.remove();
+                        }
+                    }
+                    AppController.getInstance().FullGroupList.add(currentGroup);
+
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                Intent intent = new Intent();
+                setResult(Activity.RESULT_OK, intent);
+                finish();
+            }
+        });
+        Boolean joined = false;
+        for(StudyGroup object :AppController.getInstance().AppUserGroups) {
+            if(object.id == currentGroup.id) {
+                joinbutton.setVisibility(View.GONE);
+                joined = true;
+            }
+        }
+        if(!joined){
+            leavebutton.setVisibility(View.GONE);
+        }
+
     }
 
 
@@ -141,9 +208,9 @@ public class GroupDetailActivity extends AppCompatActivity {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                VolleyLog.d("Error: ", error.getMessage());
-                Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();
+                //VolleyLog.d("Error: ", error.getMessage());
+                //Toast.makeText(getApplicationContext(),
+                    //    error.getMessage(), Toast.LENGTH_SHORT).show();
                 // hide the progress dialog
                 hidepDialog();
             }
