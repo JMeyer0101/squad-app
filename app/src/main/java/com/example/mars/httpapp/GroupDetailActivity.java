@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,10 +51,24 @@ public class GroupDetailActivity extends AppCompatActivity {
             StudyGroup sg = iterator.next();
             if(sg.id == currentGroup.id){
                 try {
+
                     makeCommentRequest(currentGroup.id);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+                //run a delayed comment update loop
+                new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+
+                            makeCommentRequest(currentGroup.id);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, 7000);
+
             }
         }
 
@@ -268,7 +285,7 @@ public class GroupDetailActivity extends AppCompatActivity {
      * */
     private void makeCommentRequest(int groupID) throws JSONException{
 
-        showpDialog();
+        //showpDialog();
         final JSONObject groupchats = new JSONObject();
         final JSONObject _jsonOBJ = new JSONObject();
         _jsonOBJ.put("studygroup_id", groupID);
@@ -278,6 +295,8 @@ public class GroupDetailActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        final ScrollView commentscroll = (ScrollView) findViewById(R.id.SCROLLER);
+
         final TextView commentsview = (TextView) findViewById(R.id.commentsview);
         //AppController.getInstance().FullGroupList.clear();
         JsonArrayRequest req = new JsonArrayRequest(Request.Method.POST, urlJsonChats, groupchats,
@@ -301,7 +320,12 @@ public class GroupDetailActivity extends AppCompatActivity {
                                 commentsview.append(group.getString("user") + ": " + group.getString("comment") + "\n");
                                // Log.i("outputmsg", group.getString("user"));
                                // Log.i("outputmsg", group.getString("comment"));
-
+                                commentscroll.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        commentscroll.fullScroll(View.FOCUS_DOWN);
+                                    }
+                                });
                                 //jsonResponse += "Mobile: " + mobile + "\n\n\n";
 
 
@@ -320,7 +344,7 @@ public class GroupDetailActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG).show();
                         }
 
-                        hidepDialog();
+                        //hidepDialog();
                         //final ListView listView = (ListView) findViewById(R.id.list2);
                         //use list data to populate the listview with studygroups
                         //GroupAdapter adapter2 = new GroupAdapter(getApplicationContext(),
