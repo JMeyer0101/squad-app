@@ -88,6 +88,9 @@ public class fragment_page2 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        pDialog = new ProgressDialog(getActivity());
+        pDialog.setMessage("Please wait...");
+        pDialog.setCancelable(false);
         if(AppController.getInstance().FullGroupList.size() > 0)
         {
             AppController.getInstance().FullGroupList.clear();
@@ -134,9 +137,7 @@ public class fragment_page2 extends Fragment {
         final ListView listView = (ListView) view.findViewById(R.id.list2);
 
 
-        pDialog = new ProgressDialog(getActivity());
-        pDialog.setMessage("Please wait...");
-        pDialog.setCancelable(false);
+
         //end http related
 
 
