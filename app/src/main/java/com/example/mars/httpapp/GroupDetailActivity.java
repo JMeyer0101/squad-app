@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,17 @@ public class GroupDetailActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         final StudyGroup currentGroup = (StudyGroup) getIntent().getParcelableExtra("selectedGroup");
+        for (Iterator<StudyGroup> iterator = AppController.getInstance().AppUserGroups.iterator(); iterator.hasNext(); ) {
+            StudyGroup sg = iterator.next();
+            if(sg.id == currentGroup.id){
+                try {
+                    makeCommentRequest(currentGroup.id);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
         final int groupID = currentGroup.id;
         //debug log group description
         Log.d("data", currentGroup.description);
@@ -63,6 +75,7 @@ public class GroupDetailActivity extends AppCompatActivity {
 
         final Button joinbutton = (Button) findViewById(R.id.joingroupbutton);
         final Button leavebutton = (Button) findViewById(R.id.leavegroupbutton);
+        final Button commentbutton = (Button) findViewById(R.id.sendcommentbutton);
 
         joinbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,16 +116,42 @@ public class GroupDetailActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        commentbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    postMessageRequest(groupID);
+                    //AppController.getInstance().AppUserGroups.add(currentGroup);
+                    //joinbutton.setVisibility(View.GONE);
+                    //leavebutton.setVisibility(View.VISIBLE);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    makeCommentRequest(groupID);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+        //show/hide join or leave buttons as necessary
         Boolean joined = false;
         for(StudyGroup object :AppController.getInstance().AppUserGroups) {
             if(object.id == currentGroup.id) {
                 joinbutton.setVisibility(View.GONE);
                 joined = true;
+                break;
             }
         }
         if(!joined){
             leavebutton.setVisibility(View.GONE);
+            RelativeLayout rlayout = (RelativeLayout) findViewById(R.id.relativeLayout3);
+            rlayout.setVisibility(View.GONE);
         }
+
+
 
     }
 
@@ -239,6 +278,7 @@ public class GroupDetailActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        final TextView commentsview = (TextView) findViewById(R.id.commentsview);
         //AppController.getInstance().FullGroupList.clear();
         JsonArrayRequest req = new JsonArrayRequest(Request.Method.POST, urlJsonChats, groupchats,
                 new Response.Listener<JSONArray>() {
@@ -250,6 +290,7 @@ public class GroupDetailActivity extends AppCompatActivity {
                             // Parsing json array response
                             // loop through each json object
                             //jsonResponse = "";
+                            commentsview.setText(null);
                             for (int i = 0; i < response.length(); i++) {
 
                                 JSONObject group = (JSONObject) response.get(i);
@@ -257,9 +298,9 @@ public class GroupDetailActivity extends AppCompatActivity {
                                 //String department = group.getString("department");
 
 
-
-                                Log.i("outputmsg", group.getString("user"));
-                                Log.i("outputmsg", group.getString("comment"));
+                                commentsview.append(group.getString("user") + ": " + group.getString("comment") + "\n");
+                               // Log.i("outputmsg", group.getString("user"));
+                               // Log.i("outputmsg", group.getString("comment"));
 
                                 //jsonResponse += "Mobile: " + mobile + "\n\n\n";
 
@@ -280,13 +321,13 @@ public class GroupDetailActivity extends AppCompatActivity {
                         }
 
                         hidepDialog();
-                        final ListView listView = (ListView) findViewById(R.id.list2);
+                        //final ListView listView = (ListView) findViewById(R.id.list2);
                         //use list data to populate the listview with studygroups
-                        GroupAdapter adapter2 = new GroupAdapter(getApplicationContext(),
-                                AppController.getInstance().FullGroupList);
+                        //GroupAdapter adapter2 = new GroupAdapter(getApplicationContext(),
+                        //        AppController.getInstance().FullGroupList);
                         // Assign adapter to ListView
 
-                        listView.setAdapter(adapter2);
+                     //   listView.setAdapter(adapter2);
                     }
 
                 }, new Response.ErrorListener() {
@@ -303,4 +344,83 @@ public class GroupDetailActivity extends AppCompatActivity {
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(req);
     }
+
+    private String urlPostMSG = "https://studygroupformer.herokuapp.com/group_comments";
+
+    /**
+     * POST COMMENT METHOD [
+     * */
+    private void postMessageRequest(final int groupID) throws JSONException{
+        final TextView comment = (TextView) findViewById(R.id.sendcomment);
+        showpDialog();
+        final JSONObject message = new JSONObject();
+        final JSONObject _jsonOBJ = new JSONObject();
+        _jsonOBJ.put("studygroup_id", groupID);
+        _jsonOBJ.put("comment", comment.getText().toString());
+        _jsonOBJ.put("user", AppController.getInstance().AppUser.username);
+
+        //_jsonOBJ.put("studygroup_id", groupID;
+        try {
+            message.put("group_comment", _jsonOBJ);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        final TextView commentsview = (TextView) findViewById(R.id.commentsview);
+        //AppController.getInstance().FullGroupList.clear();
+        JsonObjectRequest req = new JsonObjectRequest(Request.Method.POST, urlPostMSG, message,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response)  {
+                        Log.d("response:", response.toString());
+                        comment.setText("");
+
+
+
+
+
+                                //String department = group.getString("department");
+
+
+                        // commentsview.append(AppController.getInstance().AppUser.username + ": " + comment.getText().toString() + "\n");
+                                // Log.i("outputmsg", group.getString("user"));
+                                // Log.i("outputmsg", group.getString("comment"));
+
+                                //jsonResponse += "Mobile: " + mobile + "\n\n\n";
+
+
+                                //appcontroller logic
+                                // AppController.getInstance().FullGroupList.add(new StudyGroup(id, department, classno, time, description, date));
+
+                            //}
+
+//                            txtResponse.setText(jsonResponse);
+                            //AppController.getInstance().grouplist = jsonResponse;
+
+
+
+                        hidepDialog();
+                        //final ListView listView = (ListView) findViewById(R.id.list2);
+                        //use list data to populate the listview with studygroups
+                        //GroupAdapter adapter2 = new GroupAdapter(getApplicationContext(),
+                        //        AppController.getInstance().FullGroupList);
+                        // Assign adapter to ListView
+
+                        //   listView.setAdapter(adapter2);
+                    }
+
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("Error: ", error.getMessage());
+                Toast.makeText(getApplicationContext(),
+                        error.getMessage(), Toast.LENGTH_SHORT).show();
+                hidepDialog();
+
+            }
+        });
+
+        // Adding request to request queue
+        AppController.getInstance().addToRequestQueue(req);
+    }
+
 }
