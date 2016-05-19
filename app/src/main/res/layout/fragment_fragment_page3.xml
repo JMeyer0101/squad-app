@@ -14,9 +14,9 @@
     android:id="@+id/createbutton"
     android:text="Create"
         android:backgroundTint="#BDC3C7"
-        android:layout_below="@+id/date"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/descriptiontext"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,10 +33,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/classnolabel"
         android:text="Class Number"
-        android:layout_alignBaseline="@+id/timetxt"
-        android:layout_alignBottom="@+id/timetxt"
-        android:layout_alignRight="@+id/textView12"
-        android:layout_alignEnd="@+id/textView12" />
+        android:layout_below="@+id/date"
+        android:layout_centerHorizontal="true" />
 
     <EditText
     android:layout_width="wrap_content"
@@ -45,31 +43,25 @@
     android:ems="10"
     android:id="@+id/classnotxt"
         android:layout_below="@+id/classnolabel"
-        android:layout_alignLeft="@+id/classnolabel"
-        android:layout_alignStart="@+id/classnolabel"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/timetxt"
         android:text="Time"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/spinnercreate" />
+        android:layout_below="@+id/spinnercreate"
+        android:layout_centerHorizontal="true" />
 
     <EditText
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:inputType="time"
+
     android:ems="10"
     android:id="@+id/editTexttime"
     android:layout_weight="1"
         android:layout_below="@+id/timetxt"
-        android:layout_alignLeft="@+id/timetxt"
-        android:layout_alignStart="@+id/timetxt"
-        android:layout_alignRight="@+id/date"
-        android:layout_alignEnd="@+id/date" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="365dp"
@@ -77,11 +69,8 @@
         android:inputType="text"
         android:ems="10"
         android:id="@+id/descriptiontext"
-        android:layout_below="@+id/classnotxt"
-        android:layout_alignLeft="@+id/classnotxt"
-        android:layout_alignStart="@+id/classnotxt"
-        android:layout_alignRight="@+id/classnotxt"
-        android:layout_alignEnd="@+id/classnotxt" />
+        android:layout_below="@+id/textView12"
+        android:layout_centerHorizontal="true" />
 
     <Spinner
     android:layout_width="176dp"
@@ -90,8 +79,7 @@
     android:layout_gravity="right|top"
     android:entries="@array/departments_array"
         android:layout_below="@+id/textView11"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,8 +88,7 @@
         android:text="Squad Subject:"
         android:id="@+id/textView11"
         android:layout_below="@+id/textView10"
-        android:layout_alignLeft="@+id/timetxt"
-        android:layout_alignStart="@+id/timetxt" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
     android:layout_width="365dp"
@@ -109,9 +96,8 @@
     android:inputType="date"
     android:ems="10"
     android:id="@+id/date"
-        android:layout_below="@+id/editTexttime"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/datetxt"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -119,17 +105,14 @@
         android:id="@+id/datetxt"
         android:text="Date"
         android:layout_below="@+id/editTexttime"
-        android:layout_alignLeft="@+id/editTexttime"
-        android:layout_alignStart="@+id/editTexttime" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Description:"
         android:id="@+id/textView12"
-        android:layout_marginLeft="75dp"
-        android:layout_marginStart="75dp"
         android:layout_below="@+id/classnotxt"
-        android:layout_toRightOf="@+id/editTexttime"
-        android:layout_toEndOf="@+id/editTexttime" />
+        android:layout_alignLeft="@+id/classnolabel"
+        android:layout_alignStart="@+id/classnolabel" />
 </RelativeLayout>

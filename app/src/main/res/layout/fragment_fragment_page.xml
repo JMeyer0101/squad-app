@@ -7,16 +7,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:id="@+id/linearLayout"
         android:backgroundTint="@color/PUMICE"
         android:background="@color/GALLERY"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/textView5"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/list"
-        android:layout_toStartOf="@+id/list">
+        android:layout_marginTop="55dp">
 
     <ImageView
         android:layout_width="91dp"
@@ -38,30 +36,32 @@
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:padding="@dimen/abc_text_size_body_1_material"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentTop="true" />
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical" />
 
 
     </LinearLayout>
-    <ListView
-        android:id="@+id/list"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/textView5"
-        android:layout_toRightOf="@+id/textView5"
-        android:layout_toEndOf="@+id/textView5"
-        android:backgroundTint="@color/IRON">
-
-    </ListView>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="My Squads"
         android:id="@+id/textView5"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp" />
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+    <ListView
+        android:id="@+id/list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView5"
+
+        android:backgroundTint="@color/IRON"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </ListView>
+
+
 </RelativeLayout>
 

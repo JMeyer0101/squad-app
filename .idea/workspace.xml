@@ -2,8 +2,30 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <devices>
+          <device id="Nexus 10" />
+          <device id="10.1in WXGA (Tablet)" />
+        </devices>
+      </config>
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page3.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/group_list_item.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
@@ -29,34 +51,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GroupDetailActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GroupDetailActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/GroupDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20289855">
+            <state vertical-scroll-proportion="0.0">
               <caret line="346" column="26" selection-start-line="346" selection-start-column="26" selection-end-line="346" selection-end-column="26" />
               <folding>
-                <element signature="e#2087#2436#0" expanded="true" />
-                <element signature="e#2435#2436#0" expanded="true" />
-                <element signature="e#3565#4183#0" expanded="true" />
-                <element signature="e#4182#4183#0" expanded="true" />
-                <element signature="e#4225#5148#0" expanded="true" />
-                <element signature="e#5147#5148#0" expanded="true" />
-                <element signature="e#5193#5863#0" expanded="true" />
-                <element signature="e#5862#5863#0" expanded="true" />
-                <element signature="e#7438#7670#0" expanded="true" />
-                <element signature="e#7669#7670#0" expanded="true" />
-                <element signature="e#9004#9236#0" expanded="true" />
-                <element signature="e#9235#9236#0" expanded="true" />
-                <element signature="e#10717#13348#0" expanded="true" />
-                <element signature="e#11747#12020#0" expanded="true" />
-                <element signature="e#12019#12020#0" expanded="true" />
-                <element signature="e#13347#13348#0" expanded="true" />
-                <element signature="e#13350#13707#0" expanded="true" />
-                <element signature="e#13706#13707#0" expanded="true" />
-                <element signature="e#14878#16525#0" expanded="true" />
-                <element signature="e#16524#16525#0" expanded="true" />
-                <element signature="e#16527#16884#0" expanded="true" />
-                <element signature="e#16883#16884#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#11864#11865#0" expanded="false" />
+                <element signature="e#11985#11986#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SampleFragmentPagerAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/SampleFragmentPagerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#637#638#0" expanded="false" />
+                <element signature="e#670#671#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -66,8 +83,14 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_page2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
+              <caret line="252" column="36" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#3905#3906#0" expanded="false" />
+                <element signature="e#3956#3957#0" expanded="false" />
+                <element signature="e#4174#4175#0" expanded="false" />
+                <element signature="e#4228#4229#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,15 +108,56 @@
       <file leaf-file-name="content_group_detail.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_group_detail.xml">
           <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2222223">
-              <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+            <state vertical-scroll-proportion="-8.888889">
+              <caret line="164" column="12" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="41" />
               <folding>
-                <element signature="e#328#361#0" expanded="true" />
-                <element signature="e#386#421#0" expanded="true" />
-                <element signature="e#447#482#0" expanded="true" />
-                <element signature="e#506#539#0" expanded="true" />
-                <element signature="e#613#653#0" expanded="true" />
+                <element signature="e#3274#3312#0" expanded="true" />
+                <element signature="e#3900#3938#0" expanded="true" />
+                <element signature="e#4394#4432#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_fragment_page.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+              <folding>
+                <element signature="e#1045#1091#0" expanded="true" />
+                <element signature="e#1159#1205#0" expanded="true" />
+                <element signature="e#1526#1564#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_fragment_page2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page2.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_fragment_page3.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page3.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer">
@@ -105,44 +169,25 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/GroupAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_group_detail.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_group_detail.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/AppController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#1472#1473#0" expanded="false" />
-                <element signature="e#1504#1505#0" expanded="false" />
+                <element signature="e#1130#1131#0" expanded="false" />
+                <element signature="e#1170#1171#0" expanded="false" />
+                <element signature="e#1231#1232#0" expanded="false" />
+                <element signature="e#1278#1279#0" expanded="false" />
+                <element signature="e#1335#1336#0" expanded="false" />
+                <element signature="e#1366#1367#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_fragment_page2.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page2.xml">
+      <file leaf-file-name="group_list_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/group_list_item.xml">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2563,12 +2608,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page2.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_page3.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_page.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_page2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_group_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/GroupDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/GroupAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/group_list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_group_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page3.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page.xml" />
       </list>
     </option>
   </component>
@@ -2586,7 +2635,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="57" />
+    <option name="y" value="30" />
     <option name="width" value="1280" />
     <option name="height" value="773" />
   </component>
@@ -2632,6 +2682,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2765,7 +2816,6 @@
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2775,8 +2825,8 @@
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Galaxy_Nexus_tablet_API_23" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="nexus_6_phone" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="126" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="249" />
     <property name="FullScreen" value="false" />
@@ -2954,7 +3004,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <frame x="57" y="30" width="1280" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2965,7 +3015,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37747335" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.391172" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39269406" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2978,8 +3028,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20516963" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15508886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19025876" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25121164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19025876" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3015,45 +3065,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/GroupDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
-          <folding>
-            <element signature="e#2087#2436#0" expanded="true" />
-            <element signature="e#2435#2436#0" expanded="true" />
-            <element signature="e#3565#4183#0" expanded="true" />
-            <element signature="e#4182#4183#0" expanded="true" />
-            <element signature="e#4225#5148#0" expanded="true" />
-            <element signature="e#5147#5148#0" expanded="true" />
-            <element signature="e#5193#5863#0" expanded="true" />
-            <element signature="e#5862#5863#0" expanded="true" />
-            <element signature="e#7438#7670#0" expanded="true" />
-            <element signature="e#7669#7670#0" expanded="true" />
-            <element signature="e#9004#9236#0" expanded="true" />
-            <element signature="e#9235#9236#0" expanded="true" />
-            <element signature="e#10717#13348#0" expanded="true" />
-            <element signature="e#11747#12020#0" expanded="true" />
-            <element signature="e#12019#12020#0" expanded="true" />
-            <element signature="e#13347#13348#0" expanded="true" />
-            <element signature="e#13350#13707#0" expanded="true" />
-            <element signature="e#13706#13707#0" expanded="true" />
-            <element signature="e#14878#16525#0" expanded="true" />
-            <element signature="e#16524#16525#0" expanded="true" />
-            <element signature="e#16527#16884#0" expanded="true" />
-            <element signature="e#16883#16884#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_page2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="80" selection-start-line="100" selection-start-column="80" selection-end-line="100" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3067,11 +3078,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
           <folding>
-            <element signature="e#328#361#0" expanded="true" />
-            <element signature="e#386#421#0" expanded="true" />
-            <element signature="e#447#482#0" expanded="true" />
-            <element signature="e#506#539#0" expanded="true" />
-            <element signature="e#613#653#0" expanded="true" />
+            <element signature="e#3274#3312#0" expanded="true" />
+            <element signature="e#3900#3938#0" expanded="true" />
+            <element signature="e#4394#4432#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3117,7 +3126,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="159" column="32" selection-start-line="152" selection-start-column="16" selection-end-line="159" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3905#3906#0" expanded="false" />
+            <element signature="e#3956#3957#0" expanded="false" />
+            <element signature="e#4174#4175#0" expanded="false" />
+            <element signature="e#4228#4229#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3134,11 +3149,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="e#328#361#0" expanded="true" />
-            <element signature="e#386#421#0" expanded="true" />
-            <element signature="e#447#482#0" expanded="true" />
-            <element signature="e#506#539#0" expanded="true" />
-            <element signature="e#613#653#0" expanded="true" />
+            <element signature="e#3274#3312#0" expanded="true" />
+            <element signature="e#3900#3938#0" expanded="true" />
+            <element signature="e#4394#4432#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3166,9 +3179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3188,7 +3198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3226,7 +3235,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="159" column="32" selection-start-line="152" selection-start-column="16" selection-end-line="159" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3905#3906#0" expanded="false" />
+            <element signature="e#3956#3957#0" expanded="false" />
+            <element signature="e#4174#4175#0" expanded="false" />
+            <element signature="e#4228#4229#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3243,11 +3258,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="e#328#361#0" expanded="true" />
-            <element signature="e#386#421#0" expanded="true" />
-            <element signature="e#447#482#0" expanded="true" />
-            <element signature="e#506#539#0" expanded="true" />
-            <element signature="e#613#653#0" expanded="true" />
+            <element signature="e#3274#3312#0" expanded="true" />
+            <element signature="e#3900#3938#0" expanded="true" />
+            <element signature="e#4394#4432#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3275,9 +3288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3297,7 +3307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3325,28 +3334,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
           <folding>
-            <element signature="e#2087#2436#0" expanded="true" />
-            <element signature="e#2435#2436#0" expanded="true" />
-            <element signature="e#3565#4183#0" expanded="true" />
-            <element signature="e#4182#4183#0" expanded="true" />
-            <element signature="e#4225#5148#0" expanded="true" />
-            <element signature="e#5147#5148#0" expanded="true" />
-            <element signature="e#5193#5863#0" expanded="true" />
-            <element signature="e#5862#5863#0" expanded="true" />
-            <element signature="e#7438#7670#0" expanded="true" />
-            <element signature="e#7669#7670#0" expanded="true" />
-            <element signature="e#9004#9236#0" expanded="true" />
-            <element signature="e#9235#9236#0" expanded="true" />
-            <element signature="e#10717#13348#0" expanded="true" />
-            <element signature="e#11747#12020#0" expanded="true" />
-            <element signature="e#12019#12020#0" expanded="true" />
-            <element signature="e#13347#13348#0" expanded="true" />
-            <element signature="e#13350#13707#0" expanded="true" />
-            <element signature="e#13706#13707#0" expanded="true" />
-            <element signature="e#14878#16525#0" expanded="true" />
-            <element signature="e#16524#16525#0" expanded="true" />
-            <element signature="e#16527#16884#0" expanded="true" />
-            <element signature="e#16883#16884#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#11864#11865#0" expanded="false" />
+            <element signature="e#11985#11986#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3366,7 +3356,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="159" column="32" selection-start-line="152" selection-start-column="16" selection-end-line="159" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3905#3906#0" expanded="false" />
+            <element signature="e#3956#3957#0" expanded="false" />
+            <element signature="e#4174#4175#0" expanded="false" />
+            <element signature="e#4228#4229#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3383,11 +3379,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="e#328#361#0" expanded="true" />
-            <element signature="e#386#421#0" expanded="true" />
-            <element signature="e#447#482#0" expanded="true" />
-            <element signature="e#506#539#0" expanded="true" />
-            <element signature="e#613#653#0" expanded="true" />
+            <element signature="e#3274#3312#0" expanded="true" />
+            <element signature="e#3900#3938#0" expanded="true" />
+            <element signature="e#4394#4432#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3437,9 +3431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3447,31 +3438,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page2.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="59" selection-end-column="11" />
-          <folding>
-            <element signature="e#1291#1570#0" expanded="false" />
-            <element signature="e#1569#1570#0" expanded="false" />
-            <element signature="e#1692#1845#0" expanded="false" />
-            <element signature="e#1844#1845#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3497,7 +3470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="622" column="0" selection-start-line="622" selection-start-column="0" selection-end-line="622" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3524,39 +3496,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_page2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/GroupAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_group_detail.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2222223">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding>
-            <element signature="e#328#361#0" expanded="true" />
-            <element signature="e#386#421#0" expanded="true" />
-            <element signature="e#447#482#0" expanded="true" />
-            <element signature="e#506#539#0" expanded="true" />
-            <element signature="e#613#653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3567,33 +3506,119 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/GroupDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20289855">
+        <state vertical-scroll-proportion="0.0">
           <caret line="346" column="26" selection-start-line="346" selection-start-column="26" selection-end-line="346" selection-end-column="26" />
           <folding>
-            <element signature="e#2087#2436#0" expanded="true" />
-            <element signature="e#2435#2436#0" expanded="true" />
-            <element signature="e#3565#4183#0" expanded="true" />
-            <element signature="e#4182#4183#0" expanded="true" />
-            <element signature="e#4225#5148#0" expanded="true" />
-            <element signature="e#5147#5148#0" expanded="true" />
-            <element signature="e#5193#5863#0" expanded="true" />
-            <element signature="e#5862#5863#0" expanded="true" />
-            <element signature="e#7438#7670#0" expanded="true" />
-            <element signature="e#7669#7670#0" expanded="true" />
-            <element signature="e#9004#9236#0" expanded="true" />
-            <element signature="e#9235#9236#0" expanded="true" />
-            <element signature="e#10717#13348#0" expanded="true" />
-            <element signature="e#11747#12020#0" expanded="true" />
-            <element signature="e#12019#12020#0" expanded="true" />
-            <element signature="e#13347#13348#0" expanded="true" />
-            <element signature="e#13350#13707#0" expanded="true" />
-            <element signature="e#13706#13707#0" expanded="true" />
-            <element signature="e#14878#16525#0" expanded="true" />
-            <element signature="e#16524#16525#0" expanded="true" />
-            <element signature="e#16527#16884#0" expanded="true" />
-            <element signature="e#16883#16884#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#11864#11865#0" expanded="false" />
+            <element signature="e#11985#11986#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/SampleFragmentPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#637#638#0" expanded="false" />
+            <element signature="e#670#671#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_page2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="252" column="36" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3905#3906#0" expanded="false" />
+            <element signature="e#3956#3957#0" expanded="false" />
+            <element signature="e#4174#4175#0" expanded="false" />
+            <element signature="e#4228#4229#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mars/httpapp/GroupAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1130#1131#0" expanded="false" />
+            <element signature="e#1170#1171#0" expanded="false" />
+            <element signature="e#1231#1232#0" expanded="false" />
+            <element signature="e#1278#1279#0" expanded="false" />
+            <element signature="e#1335#1336#0" expanded="false" />
+            <element signature="e#1366#1367#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/group_list_item.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_group_detail.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.888889">
+          <caret line="164" column="12" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="41" />
+          <folding>
+            <element signature="e#3274#3312#0" expanded="true" />
+            <element signature="e#3900#3938#0" expanded="true" />
+            <element signature="e#4394#4432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page3.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page2.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_page.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+          <folding>
+            <element signature="e#1045#1091#0" expanded="true" />
+            <element signature="e#1159#1205#0" expanded="true" />
+            <element signature="e#1526#1564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>
